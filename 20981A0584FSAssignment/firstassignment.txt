@@ -1,0 +1,75 @@
+//Declare variables of the following types and assign appropriate values  
+
+let a:number=20
+console.log(a)
+
+let x:string ='swapna';
+console.log(x)
+
+let y:[string,number];
+y=['hello',10]
+console.log(y)
+
+let z:boolean=true
+console.log(z)
+
+let list1:number[]=[1,2,3]
+console.log(list1[1])
+
+enum week{Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday}
+console.log(week)
+
+//Declaring the add function
+function add(n1:number,n2:number):number{
+    return n1+n2;
+}
+let sum=add(2,3)
+console.log(sum)
+
+// Declaring the Capitalize function
+function capitalize(s:string):string{
+    return s.charAt(0).toUpperCase() + s.slice(1);
+}
+let c=capitalize("angular")
+console.log("Capitalized :"+c)
+
+
+//Declaring the interface with the name Persons
+interface Person{Name:string,Age:number,Email:string};
+  
+  let user:Person={     //Variable user of type Person and initialize it with sample data
+    Name:"Swapna",
+    Age:21,
+    Email:"sreeswapnakarri@gmail.com"
+  };
+  console.log(user.Email);
+
+
+//Declaring the Class with the classname Car
+  class Car {
+    make: string;
+    model: string;
+    year: number;
+  
+    constructor(make: string, model: string, year: number) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+    }
+  
+    displayInfo(): void {
+      console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
+    }
+  }
+  let myCar = new Car('KIA', 'Carens', 2022);
+  myCar.displayInfo();
+  
+//Declaring the reverse array using the Generic functions
+function reverseArray<a,b,c,d>(a1:a,a2:b,a3:c,a4:d):[d,c,b,a]{
+    return [a4,a3,a2,a1];
+  }
+
+  console.log(reverseArray<string,boolean,number,string>("Hello",true,1,"World"))
+
+ 
+  
